@@ -51,6 +51,7 @@ a:active {
 .nav li {
   margin-top: 1.5em;
   padding: 5px;
+  transition:background-color 0.5s; 
 }
 
 .active {
