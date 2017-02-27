@@ -1,0 +1,36 @@
+body {
+  background:radial-gradient(black 70%, #0e0533);
+  color:#c4c4c4;
+}
+
+#header {
+  font-family:"Old Standard TT";
+  height:17%;
+}
+
+.nav{
+  padding-left:5px;
+  border-left:3px solid #0e0533;
+  cursor:pointer;
+}
+
+.home{
+  margin-top:3%;
+}
+
+#hplimg{
+  margin-left:2%;
+}
+
+#hplquote{
+ font-family:"Old Standard TT";
+ text-shadow:3px 1px 1px #3f3f3f;
+}
+
+#summary{
+  margin:2%;
+}
+
+.selected{
+  background:#0e0533;
+}

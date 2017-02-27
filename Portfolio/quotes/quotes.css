@@ -1,0 +1,46 @@
+body {
+  padding-top:6em;
+  transition:background-color 1s;
+}
+
+#tweet i, #fb i {
+  cursor:pointer;
+  background-color:white;
+  box-shadow:2px 2px 2px black;
+  transition:color 1s;
+}
+
+.quote {
+  margin:auto;
+  color:white;
+  border: 5px solid white;
+  border-radius:10px;
+  box-shadow:2px 2px 2px black;
+  text-shadow:1px 1px 1px black;
+}
+
+.button {
+  cursor:pointer;
+  color:white;
+  padding-top:0.35em;
+  text-align:center;
+  border: 5px solid white;
+  border-radius:5px;
+  box-shadow:2px 2px 2px black
+}
+
+#tweet,#quoteMe,#fb {
+  margin-top:2em;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+#quoteMe span {
+  text-shadow:1px 1px 2px black
+}
+
+#author {
+  float:right;
+  padding-right:0.5em;
+  text-shadow:1px 1px 2px black
+}
