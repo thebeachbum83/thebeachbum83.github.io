@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<head>
+    <title> Random Quote Machine </title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether-tooltip/1.2.0/js/tooltip.js"></script>
+    <link rel="stylesheet" type="text/css" href="quotes.css" />
+    <script src="quotes.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row" id="quoteRow">
+            <div class="quote col-md-8 col-xs-8">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 col-xs-1 offset-md-2 offset-xs-2" id="tweet">
+                <a href="#" data-toggle="tooltip" data-placement="auto" title="Tweet Quote!">
+                    <i class="fa fa-twitter fa-2x fa-border"></i>
+                </a>
+            </div>
+            <div class="col-md-1 col-xs-1" id="fb">
+                <a href="#" data-toggle="tooltip" data-placement="auto" title="Post Quote!">
+                    <i class="fa fa-facebook-square fa-2x fa-border"></i>
+                </a>
+            </div>
+            <div class="button" id="quoteMe"><span class="col-md-2 col-xs-2"> Generate Quote</span>
+            </div>
+        </div>
+    </div>
+</body>
