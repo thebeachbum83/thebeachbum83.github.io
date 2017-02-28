@@ -24,8 +24,7 @@ a:active {
   color: white;
 }
 
-.navbar {
-  width: 100%;
+.nav-bar {
   display: inline-block;
   position: fixed;
   font-family: 'Kaushan Script', cursive;
@@ -35,7 +34,7 @@ a:active {
   position: relative;
 }
 
-.navbar,
+.nav-bar,
 .footer {
   background-color: #00368e;
   padding: 0;
@@ -51,7 +50,7 @@ a:active {
 .nav li {
   margin-top: 1.5em;
   padding: 5px;
-  transition:background-color 0.5s; 
+  transition:background-color 0.5s;
 }
 
 .active {
@@ -125,8 +124,13 @@ a:active {
   font-size: 1.5em;
   border: none;
   border-bottom: 2px solid #00368e;
-  outline: none;
   padding: 0.3em;
+  transition:background-color 1s;
+}
+
+.input:focus {
+  outline: none;
+  background-color:white;
 }
 
 .contact-form p {
@@ -162,16 +166,23 @@ a:active {
   display: inline-block;
   margin: 5px;
   padding: 0.5em;
-  border: 1px solid white;
+  border:1px solid #00368e;
   border-radius: 100%;
+  transition: all 0.5s;
+}
+
+.footer li:hover {
+  border: 1px solid white;
+  background-color:#00368e;
+  color:white;
 }
 
 @media screen and (max-width:670px) {
-  .navbar .row {
+  .nav-bar .row {
     width:100%;
   }
 
-  .navbar ul {
+  .nav-bar ul {
     margin-left:1em;
   }
 
