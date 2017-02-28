@@ -94,12 +94,7 @@ $(document).ready(function() {
 
             FB.api('/me/feed', 'post', {
                 message: quote + " ~" + author
-            }, function(response) {
-  if (!response || response.error) {
-    alert('Error occured');
-  } else {
-    alert('Post ID: ' + response.id);
-  }});
+            }, 
         }, {
             scope: 'publish_actions'
         });
