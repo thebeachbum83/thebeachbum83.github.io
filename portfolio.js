@@ -1,5 +1,27 @@
+var submitted=false;
+
 $(document).ready(function() {
   $(document).on("scroll",onScroll);
+
+  window.fbAsyncInit = function() {
+      FB.init({
+          appId: '771928186289466',
+          xfbml: true,
+          version: 'v2.8'
+      });
+      FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {
+          return;
+      }
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
 
   $(".nav li").click(function() {
     $(".nav li").removeClass("active");
@@ -19,6 +41,11 @@ $(document).ready(function() {
         window.location.hash = hash;
       });
     }
+  });
+
+  $('#contact-form').on('submit',function(){
+    $('#contact-form *').fadeOut(2000);
+    $('#contact-form').prepend('<strong>Your message has been sent!</strong> I will contact you shortly.');
   });
 });
 
