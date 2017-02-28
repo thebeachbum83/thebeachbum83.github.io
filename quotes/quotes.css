@@ -19,23 +19,32 @@ body {
   text-shadow:1px 1px 1px black;
 }
 
+ul li {
+  height:inherit;
+  margin:1em 1em 0 1em;
+  list-style: none;
+  display:inline-block;
+}
+
 .button {
+  margin:1em 0 2em 0;
+  padding:0 0.5em 0.5em 0.5em;
   cursor:pointer;
   color:white;
   padding-top:0.35em;
   text-align:center;
   border: 5px solid white;
   border-radius:5px;
-  box-shadow:2px 2px 2px black
+  box-shadow:2px 2px 2px black;
 }
 
 #tweet,#quoteMe,#fb {
-  margin-top:2em;
   color: white;
   text-shadow: 1px 1px 1px black;
 }
 
 #quoteMe span {
+
   text-shadow:1px 1px 2px black
 }
 
@@ -43,4 +52,10 @@ body {
   float:right;
   padding-right:0.5em;
   text-shadow:1px 1px 2px black
+}
+
+@media screen and (max-width:760px) {
+  .button{
+  margin-left:1.8em;
+  }
 }
