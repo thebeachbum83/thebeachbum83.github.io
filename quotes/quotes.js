@@ -99,7 +99,7 @@ $(document).ready(function() {
     alert('Error occured');
   } else {
     alert('Post ID: ' + response.id);
-  });
+  }});
         }, {
             scope: 'publish_actions'
         });
