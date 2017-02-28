@@ -88,15 +88,10 @@ $(document).ready(function() {
     });
 
     $("#fb").on("click", function() {
-
-        FB.login(function() {
-            quote = jQuery(quote).text();
-
-            FB.api('/me/feed', 'post', {
-                message: quote + " ~" + author
-            });
-        }, {
-            scope: 'publish_actions'
-        });
+        quote = jQuery(quote).text();
+        FB.ui({
+          method:'feed',
+          link:'https://thebeachbum83.github.io/quotes/quotes.html',
+          description:"\"" + quote + "\"" + "~" + author}, function(response){});
     });
 });
