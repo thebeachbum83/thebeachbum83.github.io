@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8" >
     <title> Random Quote Machine </title>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
@@ -18,18 +19,19 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-1 col-xs-1 offset-md-2 offset-xs-2" id="tweet">
-                <a href="#" data-toggle="tooltip" data-placement="auto" title="Tweet Quote!">
-                    <i class="fa fa-twitter fa-2x fa-border"></i>
-                </a>
-            </div>
-            <div class="col-md-1 col-xs-1" id="fb">
-                <a href="#" data-toggle="tooltip" data-placement="auto" title="Post Quote!">
-                    <i class="fa fa-facebook-square fa-2x fa-border"></i>
-                </a>
-            </div>
-            <div class="button" id="quoteMe"><span class="col-md-2 col-xs-2"> Generate Quote</span>
-            </div>
+            <ul class="col-md-2 col-xs-2 offset-md-2 offset-xs-2">
+                <li>
+                    <a id="tweet" href="#" data-toggle="tooltip" data-placement="auto" title="Tweet Quote!">
+                        <i class="fa fa-twitter fa-2x fa-border"></i>
+                    </a>
+                </li>
+                <li>
+                    <a id="fb" href="#" data-toggle="tooltip" data-placement="auto" title="Post Quote!">
+                        <i class="fa fa-facebook-square fa-2x fa-border"></i>
+                    </a>
+                </li>
+            </ul>
+            <span class="button" id="quoteMe"> Generate Quote </span>
         </div>
     </div>
 </body>
