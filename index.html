@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8" >
   <title>A portfolio by Steve</title>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"/>
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -11,7 +12,7 @@
 <body>
   <div class="container-fluid">
     <div class="row" id="home">
-     <div class="navbar">
+     <div class="nav-bar col-md-12 col-xs-12">
        <div class="row">
         <div class="brand col-md-7 col-xs-7"> <a href="#home">
             SMaj
@@ -32,7 +33,7 @@
     </div>
   </div>
   <div class="row" id="about">
-    <div class="container about-me">
+    <div class="container about-me col-md-12 col-xs-12">
       <div class="title">About Me</div>
       <div class="row">
           <p class="col-md-5 col-xs-5">
@@ -48,17 +49,21 @@
       &lt; / &gt;
     </div>
   <div class="row" id="portfolio">
-    <div class="container portfolio">
+    <div class="container portfolio col-md-12 col-xs-12">
       <div class="title">Portfolio</div>
         <div class="row website">
           <p class="col-md-6 col-xs-6 descrpiption"> A tribute page built as part of the FCC front end development program. This was my first foray into web design, and my first time using Bootstrap to create a responsive webpage. I had previously been introduced to JS and JQuery, so I leveraged that knowledge info to change the text on the page.
-             </p>
-          <a href="tribute/tribute.html" class="col-md-4 col-xs-4"><img class="img-responsive" src="tribute/tribute.JPG"></a>
+          </p>
+          <a href="tribute/tribute.html" class="col-md-4 col-xs-4">
+            <img class="img-responsive" src="tribute/tribute.jpg">
+          </a>
         </div>
         <div class="row website">
-          <a href=quotes/quotes.html class="col-md-4 col-xs-4" ><img class="img-responsive" src="http://placehold.it/350x150"></a>
-           <p class="col-md-8 col-xs-8 descrpiption"> A random quote machine written also as a part of the FCC front end development program. Here, I began to use animations and different APIs to both retreive the quote, and to post it to Facebook.
-             </p>
+          <a href="quotes/quotes.html" class="col-md-4 col-xs-4" >
+            <img class="img-responsive" src="quotes/quotes.jpg">
+          </a>
+           <p class="col-md-6 col-xs-6 descrpiption"> A random quote machine written also as a part of the FCC front end development program. Here, I began to use animations and different APIs to both retreive the quote, and to post it to Facebook.
+           </p>
         </div>
 <!--        <div class="row website">
            <p class="col-md-8 col-xs-8 descrpiption"> This is a description of the third website I built.
@@ -86,17 +91,18 @@
     &lt; / &gt;
     </div>
   <div class="row" id="contact">
-    <div class="container contact-form">
+    <div class="container contact-form col-md-12 col-xs-12">
       <div class="title">Contact Me</div>
       <div class="row">
-        <form class="contact col-md-3 col-xs-3">
-          <input type="text" class="input" placeholder="Name"/>
-           <input type="text" class="input" placeholder="Email"/>
-           <input type="text" class="input" placeholder="Phone Number"/>
-          <textarea rows="5" cols="23" class="input" placeholder="Message"></textarea>
-          <button class="button" type="submit" name="submit">Submit
+        <form class="contact col-md-3 col-xs-3" name="contact-form" id="contact-form" enctype="textp/plain" action="https://docs.google.com/forms/d/1Ngvdp1fn8SGVcqvL0SCB7p1Nzj78dtp1Yqdvergktdo/formResponse" target="hidden_iframe" onsubmit="submitted=true">
+          <input type="text" class="input" name="entry.197907261" id="entry.197907261" placeholder="Name"/>
+          <input type="text" class="input" name="entry.1758525655" id="entry.1758525655" placeholder="Email"/>
+          <input type="text" class="input" name="entry.896993505" id="entry.896993505" placeholder="Phone Number"/>
+          <textarea rows="5" cols="23" class="input" name="entry.1725697851" id="entry.1725697851" placeholder="Message"></textarea>
+          <button class="button" id="submit" type="submit" name="submit" value="Submit">Submit
           </button>
         </form>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
         <p class="offset-md-3 col-md-3 offset-xs-3 col-md-3">
           If you are interested in what I am able to offer after reviewing this portfolio, please contact me! I will get back at you as soon as I can.
         </p>
@@ -104,8 +110,8 @@
     </div>
   </div>
   <div class="row footer social-media">
-    <p>Around the web</p>
-       <ul class="offset-md-3 col-md-5 offset-xs-3 col-xs-5">
+    <p class="col-md-4 col-xs-4">Around the web</p>
+       <ul class="col-md-5 col-xs-5">
          <li>
            <a href="https://www.facebook.com/steve.major.142" target="blank"><i class="fa fa-facebook-official fa-2x"></i></a>
          </li>
