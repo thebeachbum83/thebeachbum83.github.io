@@ -94,7 +94,7 @@ $(document).ready(function() {
 
             FB.api('/me/feed', 'post', {
                 message: quote + " ~" + author
-            }); 
+            });
         }, {
             scope: 'publish_actions'
         });
