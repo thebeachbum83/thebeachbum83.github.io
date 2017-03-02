@@ -97,14 +97,7 @@ $(document).ready(function() {
     }
 
     function unescapeStr(string) {
-        stringArray = [];
-        plusIndex = [];
-
-        string = string.replace(/%20/gi," ");
-        string = string.replace(/%27/gi, "'");
-        string = string.replace(/%21/gi, '?');
-        string = string.replace(/%26/gi, '&');
-        string = string.replace(/%2C/gi, ",");
+        string = decodeURIComponent(string);
         string = string.replace(/\+/gi, " ");
         return string;
     }
