@@ -106,7 +106,6 @@ $(document).ready(function() {
         string = string.replace(/%26/gi, '&');
         string = string.replace(/%2C/gi, ",");
         string = string.replace(/\+/gi, " ");
-        string = string.replace(/%3D/gi, "=");
         return string;
     }
 
@@ -152,7 +151,7 @@ $(document).ready(function() {
             console.log(quote);
                     FB.ui({
                         method:'feed',
-                        link:'https://thebeachbum83.github.io/quotes/quotes.html?quote=' + quoteHash + 'author=' + authorHash,
+                        link:'https://thebeachbum83.github.io/quotes/quotes.html?quote=' + quoteHash + '&author=' + authorHash,
                         description:"\"" + quote + "\"" + "~" + author}, function(response){});
         });
 });
