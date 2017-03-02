@@ -97,10 +97,15 @@ $(document).ready(function() {
     }
 
     function unescapeStr(string) {
+        stringArray = [];
+        plusIndex = [];
+
         string = string.replace(/%20/gi," ");
         string = string.replace(/%27/gi, "'");
         string = string.replace(/%21/gi, '?');
         string = string.replace(/%26/gi, '&');
+        string = string.replace(/%2C/gi, ",");
+        string = string.replace(/\+/gi, " ");
         return string;
     }
 
@@ -140,13 +145,13 @@ $(document).ready(function() {
                 string = string.replace(/&/, '%26');
                 return string;
             }
-
-            quoteUrl = escapeRegExp(quote);
-            authorUrl = escapeRegExp(author);
-
+            console.log(quote);
+            quote = escapeRegExp(quote);
+            author = escapeRegExp(author);
+            console.log(quote);
                     FB.ui({
                         method:'feed',
-                        link:'https://thebeachbum83.github.io/quotes/quotes.html?quote=' + quoteUrl + 'author=' + authorUrl,
+                        link:'https://thebeachbum83.github.io/quotes/quotes.html?quote=' + quoteHash + 'author=' + authorHash,
                         description:"\"" + quote + "\"" + "~" + author}, function(response){});
         });
 });
