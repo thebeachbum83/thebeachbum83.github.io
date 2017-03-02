@@ -132,11 +132,8 @@ $(document).ready(function() {
             quote = jQuery(quote).text();
 
             function escapeRegExp(string) {
-                string = string.replace(/ /gi,'%20');
-                string = string.replace(/'/gi, '%27');
-                string = string.replace(/!/, '%21');
-                string = string.replace(/&/, '%26');
-                return string;
+               string = encodeURIComponent(string);
+               return string;
             }
             console.log(quote);
            var urlQuote = escapeRegExp(quote);
