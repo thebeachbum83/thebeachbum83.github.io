@@ -99,6 +99,16 @@ $(document).ready(function() {
     function unescapeStr(string) {
         string = decodeURIComponent(string);
         string = string.replace(/\+/gi, " ");
+        string = string.replace(/%C3%81/gi, "Á");
+        string = string.replace(/%C3%89/gi, "É");
+        string = string.replace(/%C3%8D/gi, "Í");
+        string = string.replace(/%C3%93/gi, "Ó");
+        string = string.replace(/%C3%9A/gi, "Ú");
+        string = string.replace(/%C3%A1/gi, "á");
+        string = string.replace(/%C3%A9/gi, "é");
+        string = string.replace(/%C3%AD/gi, "í");
+        string = string.replace(/%C3%B3/gi, "ó");
+        string = string.replace(/%C3%BA/gi, "ú");
         return string;
     }
 
@@ -133,6 +143,17 @@ $(document).ready(function() {
 
             function escapeRegExp(string) {
                string = encodeURIComponent(string);
+               string = string.replace(/Á/gi,"%C3%81");
+               string = string.replace(/É/gi,"%C3%89");
+               string = string.replace(/Í/gi,"%C3%8D");
+               string = string.replace(/Ó/gi,"%C3%93");
+               string = string.replace(/Ú/gi,"%C3%9A");
+               string = string.replace(/á/gi,"%C3%A1");
+               string = string.replace(/é/gi,"%C3%A9");
+               string = string.replace(/í/gi,"%C3%AD");
+               string = string.replace(/ó/gi,"%C3%B3");
+               string = string.replace(/ú/gi,"%C3%BA");
+
                return string;
             }
 
