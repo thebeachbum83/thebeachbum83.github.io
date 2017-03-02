@@ -135,10 +135,10 @@ $(document).ready(function() {
                string = encodeURIComponent(string);
                return string;
             }
-            console.log(quote);
+
            var urlQuote = escapeRegExp(quote);
            var urlAuthor = escapeRegExp(author);
-            console.log(quote);
+
                     FB.ui({
                         method:'feed',
                         link:'https://thebeachbum83.github.io/quotes/quotes.html?quote=' + urlQuote + '&author=' + urlAuthor,
