@@ -109,8 +109,6 @@ $(document).ready(function() {
         quote = unescapeStr(quoteHash);
         author = unescapeStr(authorHash);
 
-        console.log(quote + " " + author);
-
         updateColor();
         var urlQuoteHtml = "<div class = \"row\" id=\"quote\" ><i class = \"col-md-5 col-xs-5 fa fa-quote-left fa-2x\"></i><br><div class = \"col-md-8 col-xs-8\">" + quote + "</div></div>" + "<i class = \"col-md-1 col-xs-1 offset-md-5 offset-xs-5 fa fa-quote-right fa-2x\"></i><div class = \"row\" id = \"author\" ><strong>" + author + "</strong></div>";
         $('.quote').html(urlQuoteHtml);
@@ -142,13 +140,13 @@ $(document).ready(function() {
                 string = string.replace(/&/, '%26');
                 return string;
             }
-            console.log(quote);
-            quote = escapeRegExp(quote);
-            author = escapeRegExp(author);
-            console.log(quote);
+
+            quoteUrl = escapeRegExp(quote);
+            authorUrl = escapeRegExp(author);
+
                     FB.ui({
                         method:'feed',
-                        link:'https://thebeachbum83.github.io/quotes/quotes.html?quote=' + quoteHash + 'author=' + authorHash,
+                        link:'https://thebeachbum83.github.io/quotes/quotes.html?quote=' + quoteUrl + 'author=' + authorUrl,
                         description:"\"" + quote + "\"" + "~" + author}, function(response){});
         });
 });
