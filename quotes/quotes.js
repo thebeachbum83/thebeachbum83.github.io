@@ -106,6 +106,7 @@ $(document).ready(function() {
         string = string.replace(/%26/gi, '&');
         string = string.replace(/%2C/gi, ",");
         string = string.replace(/\+/gi, " ");
+        string = string.replace(/%3D/gi, "=");
         return string;
     }
 
