@@ -146,12 +146,12 @@ $(document).ready(function() {
                 return string;
             }
             console.log(quote);
-            quote = escapeRegExp(quote);
-            author = escapeRegExp(author);
+           var urlQuote = escapeRegExp(quote);
+           var urlAuthor = escapeRegExp(author);
             console.log(quote);
                     FB.ui({
                         method:'feed',
-                        link:'https://thebeachbum83.github.io/quotes/quotes.html?quote=' + quoteHash + '&author=' + authorHash,
+                        link:'https://thebeachbum83.github.io/quotes/quotes.html?quote=' + urlQuote + '&author=' + urlAuthor,
                         description:"\"" + quote + "\"" + "~" + author}, function(response){});
         });
 });
