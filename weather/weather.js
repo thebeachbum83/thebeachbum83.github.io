@@ -195,7 +195,7 @@ $(document).ready(function(){
         });
      });
    });
+  } else {
+    alert("Location not found");
   }
-
-
 });
