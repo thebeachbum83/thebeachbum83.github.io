@@ -5,11 +5,9 @@ $(document).ready(function(){
 
   if (navigator.geolocation) {
    navigator.geolocation.getCurrentPosition(function(position){
-
     var myLat = position.coords.latitude;
     var  myLon = position.coords.longitude;
     url= "https://api.apixu.com/v1/current.json?key=efb8d96e2ee047ab8ff120854170203&q=" + myLat + "," + myLon;
-
 
      $.getJSON(url,function(json){
 
@@ -36,7 +34,7 @@ $(document).ready(function(){
           $("#location").css("text-shadow","1px 1px 1px #000");
           setScheme("i","#4b6e8e");
           setScheme("#temp","#948516");
-          $("#temp").css("text-shadow","2px 2px 2px #ffc200")
+          $("#temp").css("text-shadow","2px 2px 2px #ffc200");
         }
 
 
@@ -195,7 +193,9 @@ $(document).ready(function(){
         });
      });
    });
-  } else {
-    alert("Location not found");
-  }
+ } else {
+   alert ("Location not found");
+ }
+
+
 });
