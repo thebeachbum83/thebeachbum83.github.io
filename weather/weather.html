@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, height=100%, initial-scale=1" charset="utf-8"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/weather-icons.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/weather-icons.min.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/weather-icons-wind.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/weather-icons-wind.min.css" />
+    <script src="weather.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Permanent+Marker" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheets/weather.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <title>Steve's Weather App</title>
+  </head>
+  <body class="dayGrad">
+    <div class="container">
+      <div class="row justify-content-md-center">
+          <h1 class="col-xs-6 col-md-6 animated rollIn" id="welcome">
+            Welcome to weathR!
+          </h1>
+      </div>
+      <div class="row justify-content-md-center">
+        <p class="col-xs-6 col-md-6"  id="location">
+
+        </p>
+      </div>
+      <div class="row justify-content-md-center">
+        <i class="col-xs-2 col-md-2 wi" id="icon"></i>
+        <p class="col-xs-2 col-md-2" id="temp"></p>
+      </div>
+      <div class="row">
+        <button class="btn btn-warning btn-sm col-xs-1 col-md-1 offset-xs-8 offset-md-8" id="tempToggle">&degF</button>
+      </div>
+      <div class="row justify-content-md-center">
+        <p class="col-xs-5 col-md-5" id="condition">
+
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+  <title>Get Conditions</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+</head>
+<body>
+  <div class = "condition container">
+  </div>
+</body>
+<script>
+$(document).ready(function(){
+  $.getJSON("http://www.apixu.com/doc/conditions.json",function(json){
+    var html = "";
+    json.forEach(function(val){
+      html += "<p><div class=\'col-md\'><strong>code</strong>: " + val.code + " </div><div class=\'col-md\'><strong>day</strong>: " + val.day + "  </div><div class=\'col-md\'><strong>night</strong>: " + val.night + "</div></p>";
+      $(".condition").html(html);
+    });
+  });
+})
+</script>
