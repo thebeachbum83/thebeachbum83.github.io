@@ -1,0 +1,80 @@
+body {
+  background-image:url("footer_lodyas.png");
+  color:grey;
+}
+
+p {
+  color:white;
+  padding-top:0.5em;
+  margin-bottom:2em;
+  text-align:center;
+}
+
+.container {
+  margin-top:5em;
+}
+
+i {
+  color:white;
+}
+
+i:hover {
+  color:deeppink;
+}
+
+form {
+  text-align:center;
+}
+
+#search {
+  width:0;
+  border:none;
+  opacity:0;
+  background-color:grey;
+  background-color:rgba(54,69,79,0.5);
+  border-radius:10px;
+  color:white;
+  padding-left:0.35em;
+  transition:all 1s ease;
+}
+
+#search:focus {
+  border-color: deeppink;
+  outline:none;
+  transition:all 1s ease;
+}
+
+.result {
+  margin-bottom:1em;
+  padding:0.75em;
+  background-color:grey;
+  background-color:rgba(54,69,79,0.5);
+  border-radius:10px;
+  box-shadow:2px 2px 2px deeppink;
+  transition:all 1s ease;
+}
+
+.result a {
+  text-decoration:none;
+  color:white;
+  transition:all 1s ease;
+}
+
+.result a:hover {
+  color:hotpink;
+}
+
+.result:hover {
+  background-color:rgb(33,43,49);
+  color:deeppink;
+  box-shadow: 2px 2px 2px grey;
+}
+
+.highlight{
+  font-size: 18px;
+}
+
+.random, .searchicon {
+  cursor:pointer;
+  text-align:center;
+}
