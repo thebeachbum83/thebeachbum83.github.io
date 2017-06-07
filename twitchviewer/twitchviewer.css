@@ -1,0 +1,63 @@
+body {
+  font-family:'Open Sans', sans-serif;
+  background-color:#EDEAF1;
+}
+
+.nav {
+  margin-top:2em;
+  margin-bottom:2em;
+}
+
+.card-block {
+  text-align:center;
+  transition:all 0.4s ease-out;
+}
+
+.card {
+  margin-bottom:2em;
+}
+
+.card-outline-warning {
+  box-shadow: 2px 2px 2px #f0ad4e;
+}
+
+.card-outline-danger {
+  box-shadow: 2px 2px 2px #d9534f;
+}
+
+.card-outline-success {
+  box-shadow: 2px 2px 2px #5cb85c;
+}
+
+#icon {
+  text-shadow:2px 2px 2px #4B367C;
+  font-size:10em;
+  margin-bottom:0;
+  padding-bottom:0;
+}
+
+.jumbotron {
+  color:white;
+  font-family:'Dancing Script', cursive;
+  text-shadow:2px 2px 2px #4B367C;
+  background-image:url('jumbotronbkg.jpg');
+  margin-bottom:0;
+  padding-bottom:0;
+}
+
+.jumbotron .title {
+  font-size:5em;
+  text-align:center;
+  margin:auto;
+}
+
+.card-header {
+  font-family:'Dancing Script', cursive;
+}
+
+.card-header, .card-footer {
+  color:white;
+  text-shadow:2px 2px 2px #332758;
+  background-color:#4B367C;
+  text-align:center;
+}

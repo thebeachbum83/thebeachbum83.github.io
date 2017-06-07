@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8" >
+  <title>BeTwitched</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <link href="twitchviewer.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Open+Sans" rel="stylesheet">
+  <script src="twitchviewer.js"></script>
+</head>
+
+<body>
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row">
+          <i class="fa fa-twitch col-xs-4" id="icon" aria-hidden="true"></i>
+          <div class="col-xs-2 offset-xs-2 offset-md-2 title">BeTwitched</div>
+      </div>
+    </div>
+  </div>
+
+  <ul class="nav nav-pills justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="pill" href="#all">All</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="pill" href="#live">Live Channels</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="pill" href="#offline">Offline Channels</a>
+    </li>
+  </ul>
+  <div class="container-fluid">
+    <div class="tab-content">
+      <div class="tab-pane fade show active" id="all">
+        <div class="row">
+          <div class="card-deck col-xs-8 col-md-12">
+          
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="live">
+        <div class="row">
+          <div class="card-deck col-xs-8">
+
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="offline">
+        <div class="row">
+          <div class="card-deck col-xs-8">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
