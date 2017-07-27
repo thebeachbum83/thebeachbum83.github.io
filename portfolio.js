@@ -2,8 +2,8 @@ var submitted=false;
 
 $(document).ready(function() {
 
-/*  $("#intro1").delay(500).fadeIn('slow').addClass('animated fadeInLeft');
-  $("#intro2").delay(2000).fadeIn('slow').addClass('animated fadeInUp');*/
+  $("#intro1").delay(500).fadeIn('slow').addClass('animated fadeInLeft');
+  $("#intro2").delay(2000).fadeIn('slow').addClass('animated fadeInUp'); 
   $("#intro").delay(3500).fadeOut(1500);
   $("#body").delay(4500).fadeIn(2000);
 
