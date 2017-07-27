@@ -24,27 +24,77 @@ a:active {
   color: white;
 }
 
+#intro {
+  position:absolute;
+  height:100%;
+  width:100%;
+  font-family:Lobster,cursive;
+  background-color:#0099ff;
+  color:white;
+  text-shadow:1px 1px 1px black;
+  text-align:center;
+  font-size:5em;
+}
+
+#introtext {
+  padding-top:3em;
+}
+
+#intro1, #intro2 {
+  display:none;
+}
+
+#body {
+  display:none;
+}
+
+.jumbotron {
+  background-image:url("portfolio-jumbotron.jpg");
+  margin-bottom:0;
+}
+
+.jumbotron h1 {
+  font-size:3.5em;
+}
+
+.jumbotron p {
+  font-size:1.5em;
+}
+
+#logo {
+  visibility:hidden;
+  transition: all 0.5s;
+}
+
 .nav-bar {
+  background:none;
   display: inline-block;
-  position: fixed;
   font-family: 'Kaushan Script', cursive;
+  text-shadow:1px 1px 1px black;
+  padding:0;
+  z-index:100;
 }
 
 .footer {
   position: relative;
-}
-
-.nav-bar,
-.footer {
-  background-color: #00368e;
   padding: 0;
   z-index: 100;
 }
 
+.nav-bar,.footer {
+  background: #02A8DE;
+  background:-webkit-radial-gradient(70%, circle, #e1e1ed 0%, #02A8DE 100%);
+  background:-o-radial-gradient(70%, circle, #e1e1ed 0%, #02A8DE 100%);
+  background:-moz-radial-gradient(70%, circle, #e1e1ed 0%, #02A8DE 100%);
+  background:radial-gradient(70%, circle, #e1e1ed 0%, #02A8DE 100%);
+
+}
+
 .brand {
-  font-size: 2em;
+  background-color:#0099ff;
+  color:white;
+  text-shadow:1px 1px 1px black;
   font-family: 'Kaushan Script', cursive;
-  margin: 1%
 }
 
 .nav li {
@@ -117,6 +167,22 @@ a:active {
 
 .portfolio img {
   margin-top: 0.25em;
+}
+
+.carousel {
+  background-color: black;
+}
+
+.carousel-item img{
+  margin: auto;
+}
+
+.carousel-caption {
+  top:0.3em;
+  position:relative;
+  margin:auto;
+  left:auto;
+  right:auto;
 }
 
 .input {
