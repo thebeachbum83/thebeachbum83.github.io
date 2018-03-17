@@ -20,10 +20,7 @@ function startTimer(id,deadline){
    var timerInterval = setInterval(function(){
       var clock = document.getElementById(id);
       var timer = updateTimer(deadline);
-      
-      console.log(clock);
-      console.log("days "+timer.days+"hours "+timer.hours+"minutes "+timer.minutes)
-      
+           
       clock.innerHTML = '<span>' + timer.days + '</span>'
                         + '<span>' + timer.hours + '</span>'
                         + '<span>' + timer.minutes + '</span>'
