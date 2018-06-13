@@ -1,6 +1,12 @@
 var submitted=false;
 
 $(document).ready(function() {
+
+  $("#intro1").delay(500).fadeIn('slow').addClass('animated fadeInLeft');
+  $("#intro2").delay(2000).fadeIn('slow').addClass('animated fadeInUp');
+  $("#intro").delay(3500).fadeOut(1500);
+  $("#body").delay(4500).fadeIn(2000);
+
   $(document).on("scroll",onScroll);
 
   window.fbAsyncInit = function() {
@@ -23,13 +29,13 @@ $(document).ready(function() {
       fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
 
-  $(".nav li").click(function() {
+  $(".nav li:not(:first-child)").click(function() {
     $(".nav li").removeClass("active");
     $(this).addClass("active");
   });
 
   $(".nav a").click(function() {
-    $(document).off("scroll");
+  //  $(document).off("scroll");
 
     if (this.hash !== "") {
       event.preventDefault();
@@ -40,6 +46,10 @@ $(document).ready(function() {
       }, 800, function() {
         window.location.hash = hash;
       });
+
+      $('.nav-bar').css({"position":"fixed","top":0});
+      $('#logo').css({"visibility":"visible"}).fadeIn('slow');
+
     }
   });
 
@@ -47,10 +57,29 @@ $(document).ready(function() {
     $('#contact-form *').fadeOut(2000);
     $('#contact-form').prepend('<strong>Your message has been sent!</strong> I will contact you shortly.');
   });
+
+  $('#logo').on('click',function(){
+    window.scrollTo(0,0);
+    $('#logo').css({"visibility":"hidden"});
+    $('.nav-bar').css({"position":"relative"});
+  });
+
 });
 
 function onScroll(event) {
     var scrollPos = $(document).scrollTop();
+    var navPos = $('.nav-bar').scrollTop();
+    var jumboHeight = $('.jumbotron').outerHeight();
+
+    console.log(scrollPos);
+
+    if(scrollPos > jumboHeight){
+      $('.nav-bar').css({"position":"fixed","top":0});
+      $('#logo').css({"visibility":"visible"}).fadeIn('slow');
+    } else {
+      $('#logo').css({"visibility":"hidden"});
+      $('.nav-bar').css({"position":"relative"});
+    }
     $('.nav a').each(function() {
       var currNav = $(this);
       var refElement = $(currNav.attr("href"));

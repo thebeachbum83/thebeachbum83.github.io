@@ -4,22 +4,33 @@
   <title>A portfolio by Steve</title>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"/>
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Kaushan+Script|Voltaire" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Kaushan+Script|Voltaire|Lobster" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
   <link href="portfolio.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" href="animate.css">
   <script src="portfolio.js"></script>
+  <link rel="shortcut icon" href="logo.png" />
 </head>
 <body>
+  <div id="intro">
+    <div id="introtext">
+      <div id="intro1">Hi! My name is Steve</div>
+      <div id="intro2">Let's design a website together!</div>
+    </div>
+  </div>
+  <div id="body">
+  <div class="jumbotron brand">
+    <a href="#home"><h1>Major Web Designs</h1></a>
+    <p>Your custom web designs realized!</p>
+  </div>
   <div class="container-fluid">
     <div class="row" id="home">
      <div class="nav-bar col-md-12 col-xs-12">
        <div class="row">
-        <div class="brand col-md-7 col-xs-7"> <a href="#home">
-            SMaj
-          </a>
-        </div>
-            <ul class="nav offset-md-1 col-md-3 offset-xs-1 col-xs-3">
-              <li class="active">
+            <ul class="nav col-md-3 offset-xs-1 col-xs-3">
+              <li class="offset-md-1" id="logo"><img src="logo.png" /></li>
+              <li class="offset-md-1 active">
                 <a href="#about">About</a>
               </li>
                <li>
@@ -38,9 +49,11 @@
       <div class="row">
           <p class="col-md-5 col-xs-5">
           Senior Applications Specialist, specializing in physician and nursing ordering workflow. Customer service rep by day, Web developer by night. I've worked in HTML, CSS, JavaScript, JQuery, JQueryUI, React.JS, PHP, SQL, as well as proprietary programming languages. I am also very quick to pick up new programming languages.
+        </br></br>
+          After working 5 years at my corporate job, I decided to take on a new venture, web design. I began coding in HTML, CSS, PHP, and SQL as a hobby. Soon, however opportunities to flex my webdesign skills waned, but I still kept sharp by taking free courses via Codecademy.com. Recently, I stumbled upon FreeCodeCamp. This has provided an outlet to continue coding for the web. So while I am now a programmer at my coprorate job, I am also actively coding with HTML, CSS, JavaScript, JQuery, ReactJS, PHP, and SQL.
           </p>
-        <div class="img offset-md-4 col-md-3 offset-xs-4 col-xs-3">
-          <img width="200" height="200" class="img-responsive" src="https://scontent.fbos1-1.fna.fbcdn.net/v/t1.0-9/34515_689018818744_5231417_n.jpg?oh=67bdd09672e64d0152893dfc53050eda&oe=594BFB55"/>
+        <div class="img offset-md-3 offset-xs-3">
+          <img class="img-responsive" src="personalpic.jpg"/>
         </div>
       </div>
     </div>
@@ -51,7 +64,79 @@
   <div class="row" id="portfolio">
     <div class="container portfolio col-md-12 col-xs-12">
       <div class="title">Portfolio</div>
-        <div class="row website">
+      <div class="carousel slide" id="portfolio-carousel" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#portfolio-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#portfolio-carousel" data-slide-to="1" ></li>
+          <li data-target="#portfolio-carousel" data-slide-to="2" ></li>
+          <li data-target="#portfolio-carousel" data-slide-to="3" ></li>
+          <li data-target="#portfolio-carousel" data-slide-to="4" ></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+            <a href="tribute/tribute.html" target="blank">
+              <img class="d-block img-fluid" src="tribute/tribute.jpg" alt="first-slide"/>
+              <div class="carousel-caption d-none d-md-block">
+                <h3>Tribute Project</h3>
+                <p>A tribute page built as part of the FCC front end development program. This was my first foray into web design, and my first time using Bootstrap to create a responsive webpage. I had previously been introduced to JS and JQuery, so I leveraged that knowledge info to change the text on the page.</p>
+              </div>
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="quotes/quotes.html" target="blank">
+              <img class="d-block img-fluid" src="quotes/quotes.jpg" alt="second-slide"/>
+              <div class="carousel-caption d-none d-md-block">
+                <h3>Random Quote Machine</h3>
+                <p class="text-center">
+                  A random quote machine written also as a part of the FCC front end development program. Here, I began to use animations and different APIs to both retreive the quote, and to post it to Facebook. This was my first attempt at using a JSON driven Restful API.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="weather/weather.html" target="blank">
+              <img class="d-block img-fluid" src="weather/weather.jpg" alt="third-slide"/>
+              <div class="carousel-caption d-none d-md-block">
+                <h3>Local Weather App</h3>
+                <p>
+                  A weather app created as another FCC project. This was another exercise in using APIs. Display will vary depending on time of day (day vs night) as well as the weather code coming in from the API. A button was also added to change the temperature units from imperial to metric units.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="wikiviewer/wikiviewer.html" target="blank">
+              <img class="d-block img-fluid" src="wikiviewer/wikiviewer.jpg" alt="fourth-slide"/>
+              <div class="carousel-caption d-none d-md-block">
+                <h3>Wikipedia Search</h3>
+                <p>
+                  A wikipedia search engine using the Wikipedia API to gather articles. This was another projecct for FCC. This will display a type ahead lookup of wiki articles and features a number of animations. With this project, I started to branch out more regarding the actual visual design of the application, but kept it simple, yet appealing.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="twitchviewer/twitchviewer.html" target="blank">
+              <img class="d-block img-fluid" src="twitchviewer/betwitched.jpg" alt="fifth-slide"/>
+              <div class="carousel-caption d-none d-md-block">
+                <h3>Twitch Viewer</h3>
+                <p>
+                  This Twitch viewer was a project for FCC. This takes an array of existing channels and uses RESTFUL API data to gather information regarding those channels and display it to users. This application takes dynamic data and adds style and animations to the different channels available appear based on the user's stream status.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#portfolio-carousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#portfolio-carousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+<!--        <div class="row website">
           <p class="col-md-6 col-xs-6 descrpiption"> A tribute page built as part of the FCC front end development program. This was my first foray into web design, and my first time using Bootstrap to create a responsive webpage. I had previously been introduced to JS and JQuery, so I leveraged that knowledge info to change the text on the page.
           </p>
           <a href="tribute/tribute.html" class="col-md-4 col-xs-4">
@@ -86,7 +171,7 @@
             <img class="img-responsive" src="twitchviewer/betwitched.JPG">
           </a>
         </div>
- <!--       <div class="row website">
+        <div class="row website">
           <img class="col-md-4 col-xs-4"  src="http://placehold.it/350x150">
            <p class="col-md-8 col-xs-8 descrpiption"> This is a description of the sixth website I built.
              </p>
@@ -145,4 +230,5 @@
        </ul>
      </div>
    </div>
+ </div>
 </body>
