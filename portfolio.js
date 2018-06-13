@@ -29,13 +29,13 @@ $(document).ready(function() {
       fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
 
-  $(".nav li").click(function() {
+  $(".nav li:not(:first-child)").click(function() {
     $(".nav li").removeClass("active");
     $(this).addClass("active");
   });
 
   $(".nav a").click(function() {
-    $(document).off("scroll");
+  //  $(document).off("scroll");
 
     if (this.hash !== "") {
       event.preventDefault();
@@ -46,6 +46,10 @@ $(document).ready(function() {
       }, 800, function() {
         window.location.hash = hash;
       });
+
+      $('.nav-bar').css({"position":"fixed","top":0});
+      $('#logo').css({"visibility":"visible"}).fadeIn('slow');
+
     }
   });
 
@@ -53,6 +57,13 @@ $(document).ready(function() {
     $('#contact-form *').fadeOut(2000);
     $('#contact-form').prepend('<strong>Your message has been sent!</strong> I will contact you shortly.');
   });
+
+  $('#logo').on('click',function(){
+    window.scrollTo(0,0);
+    $('#logo').css({"visibility":"hidden"});
+    $('.nav-bar').css({"position":"relative"});
+  });
+
 });
 
 function onScroll(event) {
