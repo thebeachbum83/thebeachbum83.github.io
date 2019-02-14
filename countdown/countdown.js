@@ -42,7 +42,7 @@ function startTimer(id,deadline){
 }
 
 window.onload = function(){ 
-   var deadline = new Date("February 02, 2019 04:00:00");
+   var deadline = new Date("July 04, 2019 02:30:00");
    startTimer("clock",deadline);
    
 }
